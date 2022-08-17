@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root {
+  --prime-color: #FFFFFF;
+  --secondary-color: #E1E1E6;
+  --hover-active:#02799D;
+  --button-color: #323238;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  background-color: var(--prime-color);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.stopwatch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 82rem;
+  margin: auto;
+}
+
+#timer {
+  font-size: 12.6rem;
+  line-height: 15rem;
+  margin-bottom: 2rem;
+  display: flex;
+  color: var(--button-color);
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+#controls button svg path {
+  fill: var(--button-color);
+}
+
+#controls button:hover svg path {
+  fill: var(--hover-active);
+}
+
+.choicePanel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.choicePanel button svg path:first-child {
+  fill: var(--secondary-color);
+}
+
+.choicePanel button:hover svg path:first-child,
+.choicePanel button.check svg path:first-child {
+  fill: var(--hover-active);
+}
+
+.choicePanel button svg path:last-child {
+  fill: var(--button-color);
+}
+
+.choicePanel button:hover svg path:last-child,
+.choicePanel button.check svg path:last-child {
+  fill: var(--prime-color);
+}
+
+@media (max-width: 930px) {
+  .stopwatch {
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
